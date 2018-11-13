@@ -7,6 +7,7 @@
 #include "Games/JetSetWilly.h"
 #include "Games/JetSetWillyII+.h"
 #include "Games/Rescue.h"
+#include "Games/SabreWulf.h"
 #include "Games/Spindizzy.h"
 #include "Games/Starquake.h"
 #include "Games/TechnicianTed.h"
@@ -14,7 +15,8 @@
 constexpr int CHEATS_ENABLED_BIT = 0x10000;
 
 enum class GameType {
-	Test, DynamiteDan, DynamiteDanII, JetSetWilly, JetSetWillyIIPlus, Rescue, Spindizzy, Starquake, TechnicianTed
+	Test, DynamiteDan, DynamiteDanII, JetSetWilly, JetSetWillyIIPlus, Rescue, SabreWulf, Spindizzy,
+	Starquake, TechnicianTed
 };
 
 struct GameEntry
@@ -33,6 +35,7 @@ static std::vector<GameEntry> Games
 	{ L"Jet Set Willy", GameType::JetSetWilly },
 	{ L"Jet Set Willy II+", GameType::JetSetWillyIIPlus },
 	{ L"Rescue", GameType::Rescue },
+	{ L"Sabre Wulf", GameType::SabreWulf },
 	{ L"Spindizzy", GameType::Spindizzy },
 	{ L"Starquake", GameType::Starquake },
 	{ L"Technician Ted", GameType::TechnicianTed },
@@ -100,6 +103,8 @@ static std::shared_ptr<Game> CreateGame(std::shared_ptr<TileView> view, GameType
 		return Game::Create<JSW2_Game>(view, cheats);
 	case GameType::Rescue:
 		return Game::Create<Rescue_Game>(view, cheats);
+	case GameType::SabreWulf:
+		return Game::Create<SW_Game>(view, cheats);
 	case GameType::Spindizzy:
 		return Game::Create<SD_Game>(view, cheats);
 	case GameType::Starquake:

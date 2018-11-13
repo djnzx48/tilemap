@@ -71,6 +71,9 @@
     <ClCompile Include="Games\JetSetWillyII+.cpp">
       <Filter>Source Files\Games</Filter>
     </ClCompile>
+    <ClCompile Include="Games\SabreWulf.cpp">
+      <Filter>Source Files\Games</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Z80.h">
@@ -126,6 +129,12 @@
       <Filter>Source Files\Games</Filter>
     </ClInclude>
     <ClInclude Include="Games\JetSetWillyII+.h">
+      <Filter>Source Files\Games</Filter>
+    </ClInclude>
+    <ClInclude Include="Z80-support.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Games\SabreWulf.h">
       <Filter>Source Files\Games</Filter>
     </ClInclude>
   </ItemGroup>
